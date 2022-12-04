@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Osmar Menezes da Silva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O tempo agora...</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <div id="big">
+        <div class="principal_cont">
+            <div class="form">
+                <h1>Clima agora</h1>
+                <div class="form_input_cont">
+                    <input type="text" name="inp_cidade" id="inp_cidade" placeholder="Digite uma cidade...">
+                    <button id="buscar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="dados_clima" class="esconde">
+                <h2>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span id="cidade"></span>
+                    <img src="" alt="bandeira do país" />
+                </h2>
+                <p id="temperatura">
+                    <i class="fa-solid fa-temperature-low"></i><span></span>
+                </p>
+                <div id="descricao_cont">
+                    <p id="descricao"></p>
+                    <img
+                        src=""
+                        alt="clima"
+                        id="ico_clima"
+                    />
+                </div>
+                <div id="detalhes_cont">
+                    <p id="umidade">
+                        <i class="fa-solid fa-droplet"></i>
+                        <span></span>
+                    </p>
+                    <p id="vento">
+                        <i class="fa-solid fa-wind"></i>
+                        <span></span>
+                    </p>
+                    <p id="dir_vento">
+                        <i class="fa-solid fa-arrows-turn-right"></i>
+                        <span></span>
+                    </p>
+                </div>
+                <div id="extras">
+                    <div id="extra_acordeon">
+                        <hr>
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <hr>
+                    </div>
+                    <div id="extras_cont" class="esconde">
+                        <p id="latitude">
+                            <small>
+                                Lat.:<br /> 
+                                <span></span>
+                            </small>
+                        </p>
+                        <p id="longitude">
+                            <small>
+                                Lon.:<br />
+                                <span></span>
+                            </small>
+                        </p>
+                        <p id="pressao">
+                            <small>
+                                Pressão:<br />
+                                <span></span>
+                            </small>
+                        </p>
+                        <p id="sensacao">
+                            <small>
+                                Sensação:<br />
+                                <span></span>
+                            </small>
+                        </p>
+                        <p id="minima">
+                            <small>
+                                <i class="fa-solid fa-arrow-down"></i> Min.:<br />
+                                <span></span>
+                            </small>
+                        </p>
+                        <p id="maxima">
+                            <small>
+                                <i class="fa-solid fa-arrow-up"></i> Max.:<br />
+                                <span></span>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="msg_erro" class="esconde">
+                <p>Não conheço essa cidade! <i class="fa-regular fa-face-frown"></i></p>
+            </div>
+            <div id="carregando" class="esconde">
+                <i class="fa fa-spinner"></i>
+            </div>
+            <div id="sugest">
+                <button class="btn_cidade" id="rio_de_janeiro">Rio de Janeiro</button>
+                <button class="btn_cidade" id="paris">Paris</button>
+                <button class="btn_cidade" id="shanghai">Shanghai</button>
+                <button class="btn_cidade" id="nova_iorque">Nova Iorque</button>
+                <button class="btn_cidade" id="lisboa">Lisboa</button>
+                <button class="btn_cidade" id="berlim">Berlim</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>By <a href="#">@MazinhoBigDaddy</a> - 2022</p>
+        <small>Fonte: <a href="https://openweathermap.org/" target="_blank">OpenWeather</a> API</small>
+    </footer>
+</body>
+</html>

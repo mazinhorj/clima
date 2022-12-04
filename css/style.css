@@ -1,0 +1,242 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather', serif;
+}
+
+body {
+  background: linear-gradient(180deg, #594cee 0%, #8dd0f5 100%);
+  background-image: url("https://images.unsplash.com/photo-1431440869543-efaf3388c585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dGh1bmRlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=400");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.esconde {
+  display: none !important;
+}
+
+#big {
+  height: 100vh;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.principal_cont {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  background-color: #100d3db3;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 8px;
+  color: #f2f2f2;
+  max-width: 400px;
+
+}
+
+.form h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form_input_cont {
+  display: flex;
+}
+
+.form input {
+  padding: .8rem;
+  border: none;
+  flex: 1;
+  border-radius: 4px;
+}
+
+.form button {
+  padding: .8rem;
+  min-width: 50px;
+  margin-left: .5rem;
+  background-color: #6294af;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#dados_clima, 
+#msg_erro,
+#carregando,
+#sugest {
+  border-top: 1px solid #fff;
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  text-align: center;
+}
+
+
+#dados_clima h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: .8rem;
+}
+
+#dados_clima h2 i {
+  font-size: 1.6rem;
+}
+
+#dados_clima h2 img {
+  height: 20px;
+}
+
+#dados_clima span {
+  margin: .8rem;
+}
+
+#descricao_cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .8rem 0;
+}
+
+#descricao {
+  text-transform: capitalize;
+}
+
+#detalhes_cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#detalhes_cont #umidade {
+  border-right: 1px solid #fff;
+  margin: .8rem;
+  padding: .8rem;
+}
+
+#detalhes_cont #vento {
+  border-right: 1px solid #fff;
+  padding: .8rem 0;
+}
+
+#detalhes_cont #dir_vento {
+  padding: .8rem;
+}
+
+#carregando i {
+  animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#sugest {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#sugest button {
+  min-width: 148px;
+  padding: .4rem .8rem;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  background-color: #2a2285;
+  color: #f2f2f2;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: .8;
+  cursor: pointer;
+}
+
+#sugest button:hover {
+  transition: .3s;
+  opacity: 1;
+  border: 1px solid #594edb;
+}
+
+
+#extra_acordeon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+}
+
+#extra_acordeon hr {
+  flex: 1;
+}
+
+#extra_acordeon i {
+    cursor: pointer;
+    transition: .4s;
+}
+
+
+#extras_cont {
+  margin-top: .8rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#extras_cont p {
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border-bottom: 1px solid #fff;
+}
+
+#extras_cont p:nth-child(odd) {
+  border-right: 1px solid #fff;
+}
+
+#extras_cont p:nth-child(5) {
+  border-bottom: none;
+}
+
+#extras_cont p:nth-child(6) {
+  border-bottom: none;
+}
+
+i.spin {
+  transform: rotate(45deg);
+  transition: .4s;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #f2f2f2;
+  background: linear-gradient(hsla(244, 65%, 15%, 0.5) 20%, #000000 100%);
+}
+
+footer a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
